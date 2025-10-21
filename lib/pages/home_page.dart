@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:personal/components/contacts/contact_me.dart';
-import 'package:personal/components/my_tap_bar.dart';
-import 'package:personal/components/styles/my_style.dart';
+import 'package:personal/components/homes/my_container.dart';
+import 'package:personal/components/homes/my_photo.dart';
+import 'package:personal/components/homes/tabbars/contact_me.dart';
+import 'package:personal/components/homes/tabbars/my_name.dart';
+import 'package:personal/components/homes/tabbars/my_tap_bar.dart';
 import 'package:personal/models/tab_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -29,29 +31,47 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 50, right: 150, left: 150),
-      child: Column(
-        children: [
-          Container(
-            height: 80,
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(50),
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.only(top: 50, right: 150, left: 150),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: 80,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.green.shade900,
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 15),
+                    MyName(text: "C", name: "CHEAHAV."),
+                    Expanded(
+                      child: MyTapBar(tabController: _tabController),
+                    ),
+                    SizedBox(
+                      width: 120,
+                      child: ContactMe(text: "Contact Me"),
+                    ),
+                    const SizedBox(width: 15),
+                  ],
+                ),
+              ),
             ),
-            child: Row(
-              children: [
-                SizedBox(width: 20),
-                Text("Name", style: smallBoldText),
-                SizedBox(width: 20),
-                Expanded(child: MyTapBar(tabController: _tabController)),
-                SizedBox(width: 20),
-                ContactMe(text: "Contact Me"),
-                SizedBox(width: 15),
+
+            const SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Expanded(child: MyPhoto()),
+                SizedBox(width: 30),
+                Expanded(child: MyContainer()),
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

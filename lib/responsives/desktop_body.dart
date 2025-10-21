@@ -8,7 +8,7 @@ class DesktopBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
-      body: Column(children: [HomePage()]),
+      body: SingleChildScrollView(child: Column(children: [HomePage()])),
     );
   }
 }

@@ -5,4 +5,5 @@ final Map<String, String> tabData = {
   'tool': 'Tools',
   'about': 'About',
   'media': 'Media',
+  'profile': 'Profile',
 };
