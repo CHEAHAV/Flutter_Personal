@@ -23,3 +23,7 @@ TextStyle bigboldText = TextStyle(
   fontSize: 40,
   fontWeight: FontWeight.bold,
 );
+TextStyle signText = TextStyle(
+  fontFamily: 'Montserrat',
+  fontSize: 30,
+);

@@ -17,7 +17,7 @@ class ContactMe extends StatelessWidget {
       child: Center(
         child: Text(
           text,
-          style: simpleboldText.copyWith(color: Colors.green.shade900),
+          style: simpleboldText.copyWith(color: Colors.blue),
           textAlign: TextAlign.center,
         ),
       ),

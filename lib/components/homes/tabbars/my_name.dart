@@ -16,7 +16,7 @@ class MyName extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.amber,
+            color: Colors.white,
           ),
           child: Text(
             text,
@@ -24,12 +24,12 @@ class MyName extends StatelessWidget {
               fontWeight: FontWeight.bold,
               fontSize: 32,
               fontFamily: 'ALGER',
-              color: Colors.green.shade900,
+              color: Colors.blue,
             ),
           ),
         ),
         SizedBox(width: 10),
-        Text(name, style: simpleboldText.copyWith(color: Colors.grey.shade300)),
+        Text(name, style: simpleboldText.copyWith(color: Colors.black)),
       ],
     );
   }

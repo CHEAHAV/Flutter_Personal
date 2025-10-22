@@ -12,9 +12,9 @@ class MyTapBar extends StatelessWidget {
     return TabBar(
       controller: tabController,
       dividerColor: Colors.transparent,
-      indicatorColor: Colors.amber,
-      labelColor: Colors.amber,
-      unselectedLabelColor: Colors.grey.shade400,
+      indicatorColor: Colors.transparent,
+      labelColor: Colors.blue,
+      unselectedLabelColor: Colors.black,
       tabs: tabData.map((tab) {
         return Tab(child: Text(tab.title, style: simpleboldText));
       }).toList(),

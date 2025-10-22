@@ -12,23 +12,21 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.only(top: 50, right: 150, left: 150),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Expanded(child: MyPhoto()),
-                SizedBox(width: 30),
-                Expanded(child: MyContainer()),
-              ],
-            ),
-          ],
-        ),
+    return Padding(
+      padding: const EdgeInsets.only(top: 50, right: 150, left: 150),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center, // This will work now
+            children: const [
+              Expanded(child: MyContainer()),
+              SizedBox(width: 100),
+              Expanded(child: MyPhoto()),
+            ],
+          ),
+        ],
       ),
     );
   }

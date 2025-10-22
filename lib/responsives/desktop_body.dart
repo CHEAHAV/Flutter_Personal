@@ -106,36 +106,38 @@ class _DesktopBodyState extends State<DesktopBody>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           // ----- Header -----
           Padding(
-            padding: const EdgeInsets.only(top: 32, right: 50, left: 50),
-            child: Container(
-              height: 80,
-              decoration: BoxDecoration(
-                color: Colors.green.shade900,
-                borderRadius: BorderRadius.circular(50),
-              ),
-              child: Row(
-                children: [
-                  const SizedBox(width: 15),
-                  // Logo/Name
-                  const MyName(text: "C", name: "CHEAHAV."),
+            padding: const EdgeInsets.only(right: 50, left: 50),
+            child: Card(
+              child: Container(
+                height: 80,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 15),
+                    // Logo/Name
+                    const MyName(text: "C", name: "CHEAHAV."),
 
-                  // Navigation Tabs
-                  Expanded(child: MyTapBar(tabController: _tabController)),
+                    // Navigation Tabs
+                    Expanded(child: MyTapBar(tabController: _tabController)),
 
-                  // Contact Me button
-                  GestureDetector(
-                    onTap: () => _navigateTo('Contact'),
-                    child: const SizedBox(
-                      width: 120,
-                      child: ContactMe(text: "Contact Me"),
+                    // Contact Me button
+                    GestureDetector(
+                      onTap: () => _navigateTo('Contact'),
+                      child: const SizedBox(
+                        width: 120,
+                        child: ContactMe(text: "Contact Me"),
+                      ),
                     ),
-                  ),
-                  const SizedBox(width: 15),
-                ],
+                    const SizedBox(width: 15),
+                  ],
+                ),
               ),
             ),
           ),

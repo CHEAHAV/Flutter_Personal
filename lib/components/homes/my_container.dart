@@ -1,4 +1,3 @@
-import 'package:drop_shadow/drop_shadow.dart';
 import 'package:flutter/material.dart';
 import 'package:personal/components/homes/my_buttons.dart';
 import 'package:personal/components/styles/my_style.dart';
@@ -10,31 +9,28 @@ class MyContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 800,
+      width: 900,
       height: 600,
       decoration: BoxDecoration(),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          DropShadow(
+          Card(
             child: Container(
-              width: 200,
+              width: 500,
               height: 80,
-              decoration: BoxDecoration(
-                border: Border.all(width: 4, color: Colors.green),
-                borderRadius: BorderRadius.circular(8),
-              ),
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
               child: Center(
                 child: Text(
                   info['greeting']!,
-                  style: simpleboldText.copyWith(color: Colors.green.shade900),
+                  style: simpleboldText.copyWith(color: Colors.blue),
                 ),
               ),
             ),
           ),
           Row(
             children: [
-              Text("I'm", style: bigboldText),
+              Text(info['iam']!, style: bigboldText, maxLines: 1),
               SizedBox(width: 10),
               Expanded(
                 child: Text(
@@ -43,18 +39,28 @@ class MyContainer extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 40,
                     fontFamily: 'ALGER',
-                    color: Colors.amber,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Colors.amber,
-                    decorationThickness: 1,
+                    color: Colors.blue,
+                    decorationColor: Colors.blue,
                   ),
-                  maxLines: 2,
+                  maxLines: 1,
                 ),
               ),
             ],
           ),
           Text(info['study']!, style: bigboldText, maxLines: 2),
-          Text(info['year']!, style: bigboldText, maxLines: 2),
+          Row(
+            children: [
+              Text(
+                info['year']!,
+                style: bigboldText,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+              Expanded(
+                child: Text("|", style: signText.copyWith(color: Colors.blue),overflow: TextOverflow.ellipsis,),
+              ),
+            ],
+          ),
           SizedBox(height: 20),
           Text(info['description']!),
           MyButton(text: "View my profile"),
