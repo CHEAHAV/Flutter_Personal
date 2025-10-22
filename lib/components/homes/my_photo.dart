@@ -7,16 +7,18 @@ class MyPhoto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DropShadow(
-      child: Container(
-        width: 400,
-        height: 600,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(width: 5, color: Colors.green.shade900),
-        ),
-        child: Image(
-          image: AssetImage('assets/images/reachana.png'),
-          fit: BoxFit.cover,
+      child: Card(
+        child: Container(
+          width: 450,
+          height: 600,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(width: 5, color: Colors.green.shade900),
+          ),
+          child: Image(
+            image: AssetImage('assets/images/reachana.png'),
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );

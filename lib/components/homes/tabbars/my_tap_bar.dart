@@ -1,3 +1,4 @@
+// components/my_tap_bar.dart
 import 'package:flutter/material.dart';
 import 'package:personal/components/styles/my_style.dart';
 import 'package:personal/models/tab_bar.dart';
@@ -14,8 +15,8 @@ class MyTapBar extends StatelessWidget {
       indicatorColor: Colors.amber,
       labelColor: Colors.amber,
       unselectedLabelColor: Colors.grey.shade400,
-      tabs: tabData.entries.map((entry) {
-        return Tab(child: Text(entry.value, style: simpleboldText));
+      tabs: tabData.map((tab) {
+        return Tab(child: Text(tab.title, style: simpleboldText));
       }).toList(),
     );
   }

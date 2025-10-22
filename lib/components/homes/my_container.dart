@@ -2,6 +2,7 @@ import 'package:drop_shadow/drop_shadow.dart';
 import 'package:flutter/material.dart';
 import 'package:personal/components/homes/my_buttons.dart';
 import 'package:personal/components/styles/my_style.dart';
+import 'package:personal/models/info.dart';
 
 class MyContainer extends StatelessWidget {
   const MyContainer({super.key});
@@ -25,7 +26,7 @@ class MyContainer extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  "Hello There",
+                  info['greeting']!,
                   style: simpleboldText.copyWith(color: Colors.green.shade900),
                 ),
               ),
@@ -37,7 +38,7 @@ class MyContainer extends StatelessWidget {
               SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  "It cheahav,",
+                  info['name']!,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 40,
@@ -52,13 +53,10 @@ class MyContainer extends StatelessWidget {
               ),
             ],
           ),
-          Text(
-            "Student at Royal University of Phnom Penh",
-            style: bigboldText,
-            maxLines: 2,
-          ),
-          Text("Years 4 of Computer science.", style: bigboldText, maxLines: 2),
+          Text(info['study']!, style: bigboldText, maxLines: 2),
+          Text(info['year']!, style: bigboldText, maxLines: 2),
           SizedBox(height: 20),
+          Text(info['description']!),
           MyButton(text: "View my profile"),
         ],
       ),

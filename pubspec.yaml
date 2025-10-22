@@ -81,9 +81,9 @@ flutter:
     - family: ALGER
       fonts:
         - asset: assets/fonts/ALGER.TTF
-    - family: SCRIPTBL
+    - family: Montserrat
       fonts:
-        - asset: assets/fonts/SCRIPTBL.TTF
+        - asset: assets/fonts/Montserrat.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

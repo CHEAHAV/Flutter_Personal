@@ -19,7 +19,7 @@ TextStyle smallBoldText = TextStyle(
   fontWeight: FontWeight.bold,
 );
 TextStyle bigboldText = TextStyle(
-  fontFamily: 'TIMES',
+  fontFamily: 'Montserrat',
   fontSize: 40,
   fontWeight: FontWeight.bold,
 );
