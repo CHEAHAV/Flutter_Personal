@@ -111,7 +111,7 @@ class _DesktopBodyState extends State<DesktopBody>
         children: [
           // ----- Header -----
           Padding(
-            padding: const EdgeInsets.only(right: 50, left: 50),
+            padding: const EdgeInsets.only(right: 70, left: 70),
             child: Card(
               child: Container(
                 height: 80,
@@ -148,8 +148,15 @@ class _DesktopBodyState extends State<DesktopBody>
               controller: _scrollController,
               child: Column(
                 children: [
-                  HomePage(key: _pageKeys['Home']),
+                  HomePage(
+                    key: _pageKeys['Home'],
+                    onProfileTap: () => _navigateTo('Profile'),
+                  ),
+                  Divider(),
+                  SizedBox(height: 20),
                   EducationPage(key: _pageKeys['Education']),
+                  Divider(),
+                  SizedBox(height: 20),
                   CertificatePage(key: _pageKeys['Certificate']),
                   ProjectPage(key: _pageKeys['Projects']),
                   ToolPage(key: _pageKeys['Tools']),

@@ -23,7 +23,14 @@ TextStyle bigboldText = TextStyle(
   fontSize: 40,
   fontWeight: FontWeight.bold,
 );
-TextStyle signText = TextStyle(
+TextStyle signText = TextStyle(fontFamily: 'Montserrat', fontSize: 30);
+TextStyle signTextBold = TextStyle(
   fontFamily: 'Montserrat',
   fontSize: 30,
+  fontWeight: FontWeight.bold,
+);
+TextStyle timebig = TextStyle(
+  fontFamily: 'TIMES',
+  fontSize: 40,
+  fontWeight: FontWeight.bold,
 );

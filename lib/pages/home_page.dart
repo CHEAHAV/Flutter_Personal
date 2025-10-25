@@ -3,7 +3,8 @@ import 'package:personal/components/homes/my_container.dart';
 import 'package:personal/components/homes/my_photo.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final VoidCallback onProfileTap;
+  const HomePage({super.key, required this.onProfileTap});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -13,15 +14,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 50, right: 150, left: 150),
+      padding: const EdgeInsets.only(top: 20,right: 150, left: 150),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 10),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center, // This will work now
-            children: const [
-              Expanded(child: MyContainer()),
+            children: [
+              Expanded(child: MyContainer(onProfileTap: widget.onProfileTap)),
               SizedBox(width: 100),
               Expanded(child: MyPhoto()),
             ],
